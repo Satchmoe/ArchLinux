@@ -1,0 +1,87 @@
+Aurch Linux 
+
+Edit pacman
+	sudo nano /etc/pacman.conf
+	# uncomment Color and add ILoveCandy
+	# uncomment ParallelDownloads
+
+Install yay:
+	pacman -S --needed git base-devel
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -si
+
+Yay installs:
+	tff-ms-fonts video-downloader k4dirstat clementine
+	# Nvidia drivers if needed #
+
+Install auto-cpufreq: # If on a laptop #
+	git clone https://github.com/AdnanHodzic/auto-cpufreq.git
+	cd auto-cpufreq && sudo ./auto-cpufreq-installer
+	sudo auto-cpufreq --install
+
+Check pacman cache:
+	du -sh /var/cache/pacman/pkg/
+
+Audomate pacman cache cleanup:
+	sudo pacman -S pacman-contrib
+	#enable paccache.timer
+	sudo systemctl enable paccache.timer
+
+Edit grub:
+	sudo nano /etc/default/grub
+	#GRUB_TIMEOUT_STYLE=hidden 
+	## if you not want to grub to show, press ESC as it boots if needed to show it.
+	sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+Add Firewall:
+	sudo pacman -S firewalld
+	sudo systemctl start firewalld
+	sudo systemctl enable firewalld
+
+Install CPU microcode:
+	sudo pacman -S amd-ucode # for amd
+	sudo pacman -S intel-ucode #for intel
+
+Add downgrade ability:
+	yay -S downgrade
+	sudo pacman -S expac
+
+Install user folders:
+	sudo pacman -S xdg-user-dirs
+
+Install sumblime text:
+	Install the GPG keys:
+		echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
+	Select the channel to use:
+		Stable x86_64
+			curl -O https://download.sublimetext.com/sublimehq-pub.gpg && sudo pacman-key --add sublimehq-pub.gpg && sudo pacman-key --lsign-key 8A8F901A && rm sublimehq-pub.gpg
+	sudo pacman -Syu sublime-text
+
+Install File Utilities:
+	sudo pacman -S file-roller p7zip zip unzip unrar clamav clamtk bleachbit
+
+Install video downloader:
+	yay video downloader
+	add: GDK_DEBUG=gl-glx video-downloader # To get it to run #
+
+Clamtk desktop righ click plugin:
+	# Find your desktop plugin #
+	https://gitlab.com/dave_m/clamtk#plugins
+	# Download the github file #
+	# cd to that dir #
+	cp clamtk-kde.desktop /usr/share/kservices5/ServiceMenus/
+
+Install proprietary Nvidia drivers:
+	### https://wiki.archlinux.org/title/NVIDIA ###
+	yay must be installed first:
+	# For my samsung laptop Nvidia Driver #
+	yay nvidia-340xx-dkms # or nvidia-340xx-lts-dkms for lts Kernal #
+	copy /usr/share/nvidia-340xx-dkms/20-nvidia.conf
+	to   /etc/X11/xorg.conf.d/
+	reboot
+
+Syn fastest mirrors:
+	sudo pacman -S reflector
+	sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+
