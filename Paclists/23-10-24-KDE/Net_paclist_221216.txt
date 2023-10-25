@@ -1,8 +1,8 @@
 avahi
 curl
 dnsutils
-firewalld
 iptables-nft
+firewalld
 net-tools
 netctl
 networkmanager

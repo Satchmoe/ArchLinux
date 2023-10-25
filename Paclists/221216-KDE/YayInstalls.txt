@@ -1,4 +1,0 @@
-ttf-ms-fonts
-video-downloader
-qdirstat
-kwin-bismuth-bin 

@@ -3,7 +3,7 @@ dolphin
 egl-wayland
 konsole
 kwrite
-networkmanager-qt
+networkmanager
 packagekit-qt5
 plasma-meta
 plasma-wayland-session

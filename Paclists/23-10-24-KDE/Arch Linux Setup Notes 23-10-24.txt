@@ -12,7 +12,7 @@ Install yay:
 	makepkg -si
 
 Yay installs:
-	tff-ms-fonts video-downloader k4dirstat clementine
+	tff-ms-fonts video-downloader k4dirstat
 	# Nvidia drivers if needed #
 
 Install auto-cpufreq: # If on a laptop #

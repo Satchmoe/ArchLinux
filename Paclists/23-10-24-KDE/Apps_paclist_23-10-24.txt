@@ -1,4 +1,5 @@
 haveged
+vlc
 mpv
 yt-dlp
 filezilla
@@ -24,8 +25,9 @@ wine-gecko
 wine-mono
 winetricks
 lib32-gtk3
-sublime-text
 bpytop
 base-devel
 git
 jdk-openjdk
+virtualbox-host-modules-arch
+virtualbox

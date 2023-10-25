@@ -21,3 +21,5 @@ x264
 x265
 xvidcore
 libdvdcss
+libdvdread
+libdvdnav
