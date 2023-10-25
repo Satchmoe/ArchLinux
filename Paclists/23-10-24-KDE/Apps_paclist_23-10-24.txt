@@ -25,6 +25,7 @@ wine-gecko
 wine-mono
 winetricks
 lib32-gtk3
+lib32-gtk2
 bpytop
 base-devel
 git
