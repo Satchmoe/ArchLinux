@@ -35,6 +35,23 @@ First install:
 
 		Reboot
 
+Enable Services:
+	sudo systemctl enable avahi-daemon
+	sudo systemctl enable bluetooth.service
+	sudo systemctl enable haveged.service
+	sudo systemctl enable cups.service
+	sudo systemctl enable ssdm.service
+	sudo systemctl enable NetworkManager
+	sudo systemctl enable firewalld.service
+	sudo systemctl enable sshd
+	sudo systemctl enable upower
+	sudo systemctl disable dhcpcd.service
+
+Add Groups:
+	# id username
+	usermod -aG \
+	sys,adm,network,scanner,power,uucp,audio,lp,rfkill,video,storage,optical,users \ username
+
 Edit pacman
 	sudo nano /etc/pacman.conf
 	# uncomment Color and add ILoveCandy
