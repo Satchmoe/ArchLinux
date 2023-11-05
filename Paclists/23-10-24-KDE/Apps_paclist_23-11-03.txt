@@ -32,3 +32,6 @@ git
 jdk-openjdk
 virtualbox-host-modules-arch
 virtualbox
+veracrypt
+libheif
+kcalc

@@ -50,7 +50,7 @@ Enable Services:
 Add Groups:
 	# id username
 	usermod -aG \
-	sys,adm,network,scanner,power,uucp,audio,lp,rfkill,video,storage,optical,users \ username
+	sys,adm,network,scanner,power,uucp,audio,lp,rfkill,video,storage,optical,users,wireshark \ username
 
 Edit pacman
 	sudo nano /etc/pacman.conf

@@ -1,7 +1,0 @@
-ttf-ms-fonts
-video-downloader
-qdirstat
-github-desktop
-kwin-bismuth
-timeshift-autosnap
-wsdd
