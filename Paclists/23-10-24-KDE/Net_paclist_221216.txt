@@ -12,4 +12,3 @@ nm-connection-editor
 nss-mdns
 wget
 whois
-wireshark

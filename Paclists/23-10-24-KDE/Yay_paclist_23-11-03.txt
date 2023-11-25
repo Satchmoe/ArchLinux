@@ -5,4 +5,5 @@ github-desktop
 kwin-bismuth
 timeshift-autosnap
 wsdd
+wireshark
 czkawka  # Finds duplicates based on files Add: GDK_DEBUG=gl-glx if needed
