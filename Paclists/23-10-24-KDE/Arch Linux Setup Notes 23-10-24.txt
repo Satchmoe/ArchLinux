@@ -57,6 +57,15 @@ Edit pacman:
 	# uncomment Color and add ILoveCandy
 	# uncomment ParallelDownloads
 
+Syn fastest mirrors:
+	sudo pacman -S reflector
+	# Manual Run it
+	sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+	# Autumate it
+	sudo nano /etc/xdg/reflector/reflector.conf  # Edit
+	sudo systemctl enable --now reflector.timer
+	systemctl status reflector.timer
+
 Install yay:
 	pacman -S --needed git base-devel
 	git clone https://aur.archlinux.org/yay.git
@@ -146,8 +155,4 @@ Install proprietary Nvidia drivers:
 	# update grub
 	sudo grub-mkconfig -o /boot/grub/grub.cfg
 	reboot
-
-Syn fastest mirrors:
-	sudo pacman -S reflector
-	sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
