@@ -2,7 +2,7 @@ Notes: Install software and secure Arch Linux
 #
 #		Programmer: Chevelle
 #		Date created: 10-24-2023
-#		Date Updated: 00-00-000
+#		Date Updated: 05-09-2024
 #
 #		Tested: ArchLinux 2023-10-14 = Worked
 #
@@ -83,10 +83,20 @@ yay installs:
 	# Nvidia drivers if needed #
 
 
+Hybried GPU CLI tool:
+	EnvyControl:	https://github.com/bayasdev/envycontrol
+		yay -S envycontrol
+		Run: sudo envycontrol -s <MODE> to switch graphics modes
+
+
 New Nvidia Driver Script:
 	git clone https://github.com/Frogging-Family/nvidia-all.git
 	cd nvidia-all
 	makepkg -si
+
+
+Check nvidia working and driver:
+	nvidia-smi
 
 
 Install auto-cpufreq: # If on a laptop #
