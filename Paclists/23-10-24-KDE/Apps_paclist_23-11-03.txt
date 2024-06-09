@@ -1,9 +1,7 @@
 haveged
-vlc
 mpv
 yt-dlp
 filezilla
-firefox
 flatpak
 libreoffice-fresh
 neofetch

@@ -60,7 +60,7 @@ Edit pacman:
 Syn fastest mirrors:
 	sudo pacman -S reflector
 	# Manual Run it
-	sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+	sudo reflector --verbose --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 	# Autumate it
 	sudo nano /etc/xdg/reflector/reflector.conf  # Edit
 	sudo systemctl enable --now reflector.timer
@@ -81,6 +81,13 @@ My Guithub:
 yay installs:
 	tff-ms-fonts video-downloader k4dirstat
 	# Nvidia drivers if needed #
+
+
+New Nvidia Driver Script:
+	git clone https://github.com/Frogging-Family/nvidia-all.git
+	cd nvidia-all
+	makepkg -si
+
 
 Install auto-cpufreq: # If on a laptop #
 	git clone https://github.com/AdnanHodzic/auto-cpufreq.git
