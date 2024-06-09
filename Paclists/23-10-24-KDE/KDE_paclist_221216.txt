@@ -4,6 +4,9 @@ egl-wayland
 konsole
 kwrite
 networkmanager
+qt5-graphicaleffects
+qt5-guickcontrols2
+qt5-svg
 packagekit-qt5
 plasma-meta
 plasma-wayland-session
