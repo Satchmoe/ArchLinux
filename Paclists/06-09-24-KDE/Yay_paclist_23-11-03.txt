@@ -1,13 +1,14 @@
 brave-bin
 ttf-ms-fonts
 flatseal
+sublime-text
 video-downloader  # Might have to add GDK_DEBUG=gl-glx to Evnironment Variables to run
 qdirstat
 github-desktop
-kwin-bismuth
+kwin-bismuth-bin
 timeshift-autosnap
-power-profiles-daemon
+power-profiles-daemon  # Do not use if auto-cpufreq installed
 wsdd
 wireshark
 czkawka  # Finds duplicates based on files Add: GDK_DEBUG=gl-glx if needed
-protonup-qt  # If useing steam
+protonup-qt  # If useing steam/Gaming

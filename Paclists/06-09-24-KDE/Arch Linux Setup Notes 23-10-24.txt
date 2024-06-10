@@ -46,6 +46,7 @@ Enable Services:
 	sudo systemctl enable sshd
 	sudo systemctl enable upower
 	sudo systemctl disable dhcpcd.service
+	sudo systemctl enable fail2ban
 
 Add Groups:
 	# id username
@@ -124,6 +125,8 @@ Add Firewall:
 	sudo systemctl enable firewalld
 
 Install CPU microcode:
+	CPU Check if affected by a known vulnerability
+	grep -r . /sys/devices/system/cpu/vulnerabilities/
 	sudo pacman -S amd-ucode # for amd
 	sudo pacman -S intel-ucode #for intel
 

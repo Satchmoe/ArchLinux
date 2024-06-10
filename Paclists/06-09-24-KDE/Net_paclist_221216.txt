@@ -2,6 +2,7 @@ avahi
 curl
 dnsutils
 iptables-nft
+fail2ban
 firewalld
 net-tools
 netctl

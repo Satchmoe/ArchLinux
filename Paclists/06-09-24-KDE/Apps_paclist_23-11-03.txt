@@ -1,12 +1,11 @@
-haveged
 mpv
 yt-dlp
 filezilla
 flatpak
+strawberry
 libreoffice-fresh
 neofetch
 qbittorrent
-upower
 file-roller
 p7zip
 zip
@@ -16,8 +15,10 @@ clamav
 clamtk
 bleachbit
 terminator
+handbrake
 catfish
 dosbox
+lutris
 wine
 wine-gecko
 wine-mono

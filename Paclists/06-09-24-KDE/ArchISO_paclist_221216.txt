@@ -1,5 +1,4 @@
 alsa-utils
-amd-ucode
 arch-install-scripts
 archinstall
 b43-fwcutter
@@ -8,7 +7,6 @@ bind
 brltty
 broadcom-wl
 btrfs-progs
-clonezilla
 cloud-init
 cryptsetup
 darkhttpd
@@ -37,6 +35,7 @@ grml-zsh-config
 grub
 hdparm
 hyperv
+amd-ucode
 intel-ucode
 irssi
 iw
