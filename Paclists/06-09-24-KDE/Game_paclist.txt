@@ -1,0 +1,7 @@
+Pacman:
+	dosbox
+	lutris
+	steam
+		
+AUR:
+	protonup-qt  # If useing steam/Gaming 

@@ -1,6 +1,7 @@
 brave-bin
 ttf-ms-fonts
 flatseal
+vmware-workstation
 sublime-text
 video-downloader  # Might have to add GDK_DEBUG=gl-glx to Evnironment Variables to run
 qdirstat
@@ -11,4 +12,7 @@ power-profiles-daemon  # Do not use if auto-cpufreq installed
 wsdd
 wireshark
 czkawka  # Finds duplicates based on files Add: GDK_DEBUG=gl-glx if needed
-protonup-qt  # If useing steam/Gaming
+
+arch-update  # Edit timer: systemctl --user edit --full arch-update.timer # s seconds, m min, h hours, d days
+			 # Timer     : systemctl --user enable --now arch-update.timer
+			 # Tray		 : systemctl --user enable --now arch-update-tray.service
