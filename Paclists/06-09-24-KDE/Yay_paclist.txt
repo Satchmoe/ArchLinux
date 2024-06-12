@@ -1,6 +1,7 @@
 brave-bin
 ttf-ms-fonts
 flatseal
+clean
 vmware-workstation
 sublime-text
 video-downloader  # Might have to add GDK_DEBUG=gl-glx to Evnironment Variables to run
