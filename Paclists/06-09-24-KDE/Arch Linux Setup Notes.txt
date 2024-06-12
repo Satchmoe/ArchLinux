@@ -73,6 +73,17 @@ Install yay:
 	cd yay
 	makepkg -si
 
+
+Script Architect:
+	Post-installation Script after archinstall:
+
+	sudo pacman -S --needed git base-devel \
+  	&& git clone https://codeberg.org/Gaming-Linux-FR/Architect.git ~/Architect \
+  	&& cd ~/Architect \
+  	&& chmod +x ./architect.sh \
+  	&& ./architect.sh
+
+
 My Guithub:
 	# need git installed
 	# install with (sudo pacman -S --needed - < FileName )
@@ -108,7 +119,7 @@ Install auto-cpufreq: # If on a laptop #
 Check pacman cache:
 	du -sh /var/cache/pacman/pkg/
 
-Audomate pacman cache cleanup:
+Automate pacman cache cleanup:
 	sudo pacman -S pacman-contrib
 	#enable paccache.timer
 	sudo systemctl enable paccache.timer
@@ -119,10 +130,42 @@ Edit grub:
 	## if you not want to grub to show, press ESC as it boots if needed to show it.
 	sudo grub-mkconfig -o /boot/grub/grub.cfg
 
+
+Arch update:
+arch-update  # Edit timer: systemctl --user edit --full arch-update.timer # s seconds, m min, h hours, d days
+			 # Timer     : systemctl --user enable --now arch-update.timer
+			 # Tray		 : systemctl --user enable --now arch-update-tray.service
+
+	OR
+	yay -S arch-update
+	systemctl --user enable --now arch-update.timer
+	systemctl --user enable --now arch-update-tray.service
+
+
 Add Firewall:
 	sudo pacman -S firewalld
 	sudo systemctl start firewalld
 	sudo systemctl enable firewalld
+
+	OR
+	sudo pacman -S --needed --noconfirm firewalld python-pyqt5 python-capng
+	sudo systemctl enable --now firewalld.service
+	firewall-applet &
+
+
+Make Alias:
+	nano ~/.bashrc
+	for yay
+		alias update-arch='yay && flatpak update'
+
+		alias clean-arch='yay -Sc && yay -Yc && flatpak remove --unused'
+
+	For all
+		alias update-mirrors='sudo reflector --verbose --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+
+		alias fix-key='sudo rm /var/lib/pacman/sync/* && sudo rm -rf /etc/pacman.d/gnupg/* && sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy --noconfirm archlinux-keyring && sudo pacman --noconfirm -Su'	
+
+
 
 Install CPU microcode:
 	CPU Check if affected by a known vulnerability

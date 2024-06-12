@@ -12,7 +12,3 @@ power-profiles-daemon  # Do not use if auto-cpufreq installed
 wsdd
 wireshark
 czkawka  # Finds duplicates based on files Add: GDK_DEBUG=gl-glx if needed
-
-arch-update  # Edit timer: systemctl --user edit --full arch-update.timer # s seconds, m min, h hours, d days
-			 # Timer     : systemctl --user enable --now arch-update.timer
-			 # Tray		 : systemctl --user enable --now arch-update-tray.service
