@@ -5,9 +5,10 @@ konsole
 kwrite
 networkmanager
 qt5-graphicaleffects
-qt5-guickcontrols2
+qt5-quickcontrols2
 qt5-svg
-packagekit-qt5
+packagekit-qt6
+fwupd
 plasma-meta
 plasma-wayland-session
 print-manager
