@@ -17,3 +17,4 @@ ttf-liberation
 ttf-opensans
 ttf-roboto
 ttf-ubuntu-font-family
+powerline-fonts

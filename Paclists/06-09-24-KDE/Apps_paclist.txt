@@ -30,3 +30,6 @@ veracrypt
 libheif
 kcalc
 solaar
+fish
+pkgfile
+inetutils
