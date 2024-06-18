@@ -33,3 +33,4 @@ solaar
 fish
 pkgfile
 inetutils
+qalculate-gtk
