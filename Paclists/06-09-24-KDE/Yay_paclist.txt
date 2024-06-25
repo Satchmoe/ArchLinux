@@ -7,7 +7,7 @@ sublime-text
 video-downloader  # Might have to add GDK_DEBUG=gl-glx to Evnironment Variables to run
 qdirstat
 github-desktop
-kwin-bismuth-bin
+kwin-bismuth-bin  # Is being worked on / Broke for now
 timeshift-autosnap
 power-profiles-daemon  # Do not use if auto-cpufreq installed
 wsdd
