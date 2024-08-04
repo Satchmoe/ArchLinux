@@ -153,6 +153,12 @@ Add Firewall:
 	firewall-applet &
 
 
+Fish Shell:
+	sudo pacman -S fish pkgfile ttf-dejavu powerline-fonts inetutils
+	# Make alias edit: ~/.config/fish/config.fish
+	# Edit: fish_config
+
+
 Make Alias:
 	nano ~/.bashrc
 	for yay
