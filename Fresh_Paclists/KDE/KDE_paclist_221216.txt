@@ -1,10 +1,14 @@
 ark
 dolphin
 egl-wayland
+fwupd
 konsole
 kwrite
 networkmanager-qt
-packagekit-qt5
+qt5-graphicaleffects
+qt5-quickcontrols2
+qt5-svg
+packagekit-qt6
 plasma-meta
 plasma-wayland-session
 print-manager

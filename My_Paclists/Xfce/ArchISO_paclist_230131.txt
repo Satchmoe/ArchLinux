@@ -112,8 +112,8 @@ usbmuxd
 usbutils
 vim
 vpnc
-wireless-regdb
 wireless_tools
+wireless-regdb
 wpa_supplicant
 wvdial
 xfsprogs
