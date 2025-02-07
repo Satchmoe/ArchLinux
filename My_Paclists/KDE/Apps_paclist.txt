@@ -6,7 +6,6 @@ clamav
 clamtk
 fastfetch
 file-roller
-filezilla
 fish
 flatpak
 git
@@ -23,7 +22,6 @@ pkgfile
 qalculate-gtk
 qbittorrent
 solaar
-strawberry
 terminator
 unrar
 unzip
