@@ -2,3 +2,4 @@ wd719x-firmware
 upd72020x-fw
 linux-firmware-qlogic
 aic94xx-firmware
+ast-firmware
