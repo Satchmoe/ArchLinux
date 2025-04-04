@@ -2,7 +2,7 @@ Notes: Install software and secure Arch Linux
 #
 #		Programmer: Chevelle
 #		Date created: 10-24-2023
-#		Date Updated: 05-09-2024
+#		Date Updated: 04-03-2025
 #
 #		Tested: ArchLinux 2023-10-14 = Worked
 #
@@ -67,10 +67,10 @@ Syn fastest mirrors:
 	sudo systemctl enable --now reflector.timer
 	systemctl status reflector.timer
 
-Install yay:
+Install paru:
 	pacman -S --needed git base-devel
-	git clone https://aur.archlinux.org/yay.git
-	cd yay
+	git clone https://aur.archlinux.org/paru.git
+	cd paru
 	makepkg -si
 
 
@@ -90,14 +90,14 @@ My Guithub:
 	git clone https://github.com/Satchmoe/ArchLinux
 
 
-yay installs:
+paru installs:
 	tff-ms-fonts video-downloader k4dirstat
 	# Nvidia drivers if needed #
 
 
 Hybried GPU CLI tool:
 	EnvyControl:	https://github.com/bayasdev/envycontrol
-		yay -S envycontrol
+		paru -S envycontrol
 		Run: sudo envycontrol -s <MODE> to switch graphics modes
 
 
@@ -106,6 +106,9 @@ New Nvidia Driver Script:
 	cd nvidia-all
 	makepkg -si
 
+Install nvidia drivers:
+	# My Dell laptop:
+	sudo pacman -S linux-headers nvidia-open nvidia-settings
 
 Check nvidia working and driver:
 	nvidia-smi
@@ -137,7 +140,7 @@ arch-update  # Edit timer: systemctl --user edit --full arch-update.timer # s se
 			 # Tray		 : systemctl --user enable --now arch-update-tray.service
 
 	OR
-	yay -S arch-update
+	paru -S arch-update
 	systemctl --user enable --now arch-update.timer
 	systemctl --user enable --now arch-update-tray.service
 
@@ -155,21 +158,27 @@ Add Firewall:
 
 Fish Shell:
 	sudo pacman -S fish pkgfile ttf-dejavu powerline-fonts inetutils
+	# Make fish defalt:
+		sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
+		chsh -s /usr/bin/fish
+
+	# Disable welcome message: set -U fish_greeting
+		
 	# Make alias edit: ~/.config/fish/config.fish
 	# Edit: fish_config
 
 
 Make Alias:
 	nano ~/.bashrc
-	for yay
-		alias update-arch='yay && flatpak update'
+	for paru
+		alias uparch='paru && flatpak update'
 
-		alias clean-arch='yay -Sc && yay -Yc && flatpak remove --unused'
+		alias clarch='paru -Sc && paru -Yc && flatpak remove --unused'
 
 	For all
-		alias update-mirrors='sudo reflector --verbose --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+		alias upmirrors='sudo reflector --verbose --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
-		alias fix-key='sudo rm /var/lib/pacman/sync/* && sudo rm -rf /etc/pacman.d/gnupg/* && sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy --noconfirm archlinux-keyring && sudo pacman --noconfirm -Su'	
+		alias fixkey='sudo rm /var/lib/pacman/sync/* && sudo rm -rf /etc/pacman.d/gnupg/* && sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy --noconfirm archlinux-keyring && sudo pacman --noconfirm -Su'	
 
 
 
@@ -180,7 +189,7 @@ Install CPU microcode:
 	sudo pacman -S intel-ucode #for intel
 
 Add downgrade ability:
-	yay -S downgrade
+	paru -S downgrade
 	sudo pacman -S expac
 
 Install user folders:
@@ -198,7 +207,7 @@ Install File Utilities:
 	sudo pacman -S file-roller p7zip zip unzip unrar clamav clamtk bleachbit
 
 Install video downloader:
-	yay video downloader
+	paru video downloader
 	add: GDK_DEBUG=gl-glx video-downloader # To get it to run #
 
 Clamtk desktop righ click plugin:
@@ -210,9 +219,9 @@ Clamtk desktop righ click plugin:
 
 Install proprietary Nvidia drivers:
 	### https://wiki.archlinux.org/title/NVIDIA ###
-	# yay must be installed first:
+	# paru must be installed first:
 	# For my samsung laptop Nvidia Driver #
-	yay nvidia-340xx-dkms # or nvidia-340xx-lts-dkms for lts Kernal #
+	paru nvidia-340xx-dkms # or nvidia-340xx-lts-dkms for lts Kernal #
 	copy /usr/share/nvidia-340xx-dkms/20-nvidia.conf
 	to   /etc/X11/xorg.conf.d/
 	# Add file to open the settings
