@@ -183,7 +183,7 @@ Make Alias:
 	for paru
 		alias uparch='paru && flatpak update'
 
-		alias clarch='paru -Sc && paru -Yc && flatpak remove --unused'
+		alias clarch='paru -Sc && flatpak remove --unused'
 
 	For all
 		alias upmirrors='sudo reflector --verbose --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
