@@ -175,7 +175,7 @@ Check services:
 		systemctl list-unit-files --state=disabled
 
 	# Enabled services:
-	systemctl list-unit-files --state=enabled
+		systemctl list-unit-files --state=enabled
 
 
 Make Alias:
