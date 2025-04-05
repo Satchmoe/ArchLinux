@@ -1,5 +1,5 @@
 wd719x-firmware
-upd72020x-fw
+upd72020x-fw # out of date
 linux-firmware-qlogic
 aic94xx-firmware
 ast-firmware

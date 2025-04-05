@@ -1,6 +1,7 @@
 ark
 dolphin
 egl-wayland
+gnome-firmware
 konsole
 kwrite
 networkmanager

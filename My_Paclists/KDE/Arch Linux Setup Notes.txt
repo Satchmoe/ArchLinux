@@ -2,9 +2,9 @@ Notes: Install software and secure Arch Linux
 #
 #		Programmer: Chevelle
 #		Date created: 10-24-2023
-#		Date Updated: 04-03-2025
+#		Date Updated: 04-05-2025
 #
-#		Tested: ArchLinux 2023-10-14 = Worked
+#		Tested: ArchLinux 2025-04-01 = Worked
 #
 #		Note:
 #
@@ -16,7 +16,7 @@ Notes: Install software and secure Arch Linux
 #
 
 First install:
-	Addition packages: git, openssh, nano, terminus-font
+	Addition packages: git, terminus-font
 
 	# post install chroot checks:
 		
@@ -32,6 +32,20 @@ First install:
 		nano /etc/mkinitcpio.conf
 		# MODULES=(btrfs)
 		# HOOKS encrypt is before the filesystem
+
+		# Arch Dual Boot with Windows 10/11
+		Bootlader needs to be: GRUB
+		Addition packages: dosfstools, mtools, os-prober
+		grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+		nano /etc/default/grub
+		unhashtag: GRUB_DISABLE_OS_PROBER=false
+		hashtag: GRUB_GFXMODE=auto and add GRUB_GFXMODE=800x600 or 640x480
+		grub-mkconfig -o /boot/grub/grub.cfg
+
+		# If not showing up in GRUB
+			Start arch linux, lsblk and /mnt windows boot partition
+			grub-mkconfig -o /boot/grub/grub.cfg
+			
 
 		Reboot
 

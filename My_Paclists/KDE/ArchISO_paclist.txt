@@ -13,6 +13,7 @@ darkhttpd
 ddrescue
 dhclient
 dhcpcd
+dkms
 diffutils
 dmidecode
 dmraid
@@ -46,6 +47,7 @@ less
 lftp
 libfido2
 libusb-compat
+libva-utils
 linux
 linux-headers
 linux-atm
@@ -78,6 +80,7 @@ open-vm-tools
 openconnect
 openssh
 openvpn
+os-prober
 partclone
 parted
 partimage
