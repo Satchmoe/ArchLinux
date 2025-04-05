@@ -167,6 +167,16 @@ Fish Shell:
 	# Make alias edit: ~/.config/fish/config.fish
 	# Edit: fish_config
 
+Check services:
+	# Running services:
+		systemctl list-units --type=service
+
+	# Disabled services:
+		systemctl list-unit-files --state=disabled
+
+	# Enabled services:
+	systemctl list-unit-files --state=enabled
+
 
 Make Alias:
 	nano ~/.bashrc
