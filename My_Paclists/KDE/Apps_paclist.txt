@@ -4,6 +4,7 @@ btop
 catfish
 clamav
 clamtk
+dosbox
 fastfetch
 file-roller
 fish
@@ -24,6 +25,7 @@ terminator
 unrar
 unzip
 veracrypt
+vlc
 wine
 wine-gecko
 wine-mono

@@ -11,5 +11,7 @@ networkmanager-openvpn
 network-manager-applet
 nm-connection-editor
 nss-mdns
+python=pyqt5
+python-capng
 wget
 whois

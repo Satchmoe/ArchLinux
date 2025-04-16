@@ -17,4 +17,5 @@ ttf-liberation
 ttf-opensans
 ttf-roboto
 ttf-ubuntu-font-family
+ttf-jetbrains-mono
 powerline-fonts
