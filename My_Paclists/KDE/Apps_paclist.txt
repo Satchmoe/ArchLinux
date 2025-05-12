@@ -30,6 +30,6 @@ wine
 wine-gecko
 wine-mono
 winetricks
-Yakuake
+yakuake
 yt-dlp
 zip
