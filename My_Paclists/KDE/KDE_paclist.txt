@@ -7,7 +7,9 @@ kwrite
 networkmanager
 qt5-graphicaleffects
 qt5-quickcontrols2
+qt5-multimedia
 qt5-svg
+qt5-wayland
 packagekit-qt6
 fwupd
 plasma-meta
