@@ -43,6 +43,7 @@ iw
 iwd
 jfsutils
 kitty-terminfo
+kio-admin
 less
 lftp
 libfido2

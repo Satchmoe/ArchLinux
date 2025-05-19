@@ -9,10 +9,16 @@ fastfetch
 file-roller
 fish
 flatpak
+freetube
 git
+gparted
+ghostty
+handbrake
 inetutils
 jdk-openjdk
 kcalc
+k3b
+kodi
 lib32-gtk2
 lib32-gtk3
 libheif
@@ -21,6 +27,7 @@ mpv
 p7zip
 pkgfile
 qalculate-gtk
+rushdesk
 terminator
 unrar
 unzip
