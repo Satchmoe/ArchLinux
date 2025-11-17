@@ -11,7 +11,8 @@ flatpak
 filelight
 git
 gparted
-ghostty
+ghostt
+qbittorrent
 handbrake
 k3b
 kodi
