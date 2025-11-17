@@ -104,11 +104,6 @@ My Guithub:
 	git clone https://github.com/Satchmoe/ArchLinux
 
 
-paru installs:
-	tff-ms-fonts video-downloader k4dirstat
-	# Nvidia drivers if needed #
-
-
 Hybried GPU CLI tool:
 	EnvyControl:	https://github.com/bayasdev/envycontrol
 		paru -S envycontrol
@@ -119,6 +114,7 @@ New Nvidia Driver Script:
 	git clone https://github.com/Frogging-Family/nvidia-all.git
 	cd nvidia-all
 	makepkg -si
+
 
 Install nvidia drivers:
 	# My Dell laptop:
