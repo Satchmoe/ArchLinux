@@ -15,6 +15,9 @@ ghostt
 qbittorrent
 handbrake
 k3b
+cdrtools
+cdrdao
+dvd+rw-tools
 kodi
 libreoffice-fresh
 mpv
