@@ -26,4 +26,6 @@ zip
 veracrypt
 vlc
 wine
+wine-mono
+wine-gecko
 winetricks
