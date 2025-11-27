@@ -170,6 +170,15 @@ Add Firewall:
 	sudo systemctl enable --now firewalld.service
 	firewall-applet &
 
+Check services:
+	# Running services:
+		systemctl list-units --type=service
+
+	# Disabled services:
+		systemctl list-unit-files --state=disabled
+
+	# Enabled services:
+		systemctl list-unit-files --state=enabled
 
 Fish Shell:
 	sudo pacman -S fish pkgfile ttf-dejavu powerline-fonts inetutils
@@ -182,36 +191,29 @@ Fish Shell:
 	# Make alias edit: ~/.config/fish/config.fish
 	# Edit: fish_config
 
-Check services:
-	# Running services:
-		systemctl list-units --type=service
-
-	# Disabled services:
-		systemctl list-unit-files --state=disabled
-
-	# Enabled services:
-		systemctl list-unit-files --state=enabled
-
-
 Make Alias:
-	nano ~/.bashrc
-	for paru
+	#nano ~/.bashrc
+	# Make alias edit: ~/.config/fish/config.fish
+	for bat:
+		alias cat="bat"
+
+	for exa:
+		alias ls="exa"
+		alias ll="exa -alh"
+		alias tree="exa --tree"
+
+	for fzf:
+		alias slt='subl $(fzf -m --preview="bat --color=always {}")'
+
+	for paru:
 		alias uparch='paru && flatpak update'
 
 		alias clarch='paru -Sc && flatpak remove --unused'
 
-	For all
+	For all:
 		alias upmirrors='sudo reflector --verbose --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
 		alias fixkey='sudo rm /var/lib/pacman/sync/* && sudo rm -rf /etc/pacman.d/gnupg/* && sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy --noconfirm archlinux-keyring && sudo pacman --noconfirm -Su'	
-
-
-
-Install CPU microcode:
-	CPU Check if affected by a known vulnerability
-	grep -r . /sys/devices/system/cpu/vulnerabilities/
-	sudo pacman -S amd-ucode # for amd
-	sudo pacman -S intel-ucode #for intel
 
 Add downgrade ability:
 	paru -S downgrade
@@ -219,17 +221,6 @@ Add downgrade ability:
 
 Install user folders:
 	sudo pacman -S xdg-user-dirs
-
-Install sumblime text:
-	Install the GPG keys:
-		echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
-	Select the channel to use:
-		Stable x86_64
-			curl -O https://download.sublimetext.com/sublimehq-pub.gpg && sudo pacman-key --add sublimehq-pub.gpg && sudo pacman-key --lsign-key 8A8F901A && rm sublimehq-pub.gpg
-	sudo pacman -Syu sublime-text
-
-Install video downloader:
-	flatpak parabolic
 
 Clamtk desktop righ click plugin:
 	# Find your desktop plugin #
