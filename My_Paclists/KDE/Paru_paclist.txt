@@ -9,3 +9,4 @@ rustdesk
 Games:
 	protonup-qt
 	bottles
+	heroic
