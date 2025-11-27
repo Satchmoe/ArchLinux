@@ -1,0 +1,6 @@
+ghostty
+bat
+fzf
+fish
+exa
+entr

@@ -128,10 +128,15 @@ Check nvidia working and driver:
 	nvidia-smi
 
 
-Install auto-cpufreq: # If on a laptop #
+Install power management 
+	auto-cpufreq: # If on a laptop #
 	git clone https://github.com/AdnanHodzic/auto-cpufreq.git
 	cd auto-cpufreq && sudo ./auto-cpufreq-installer
 	sudo auto-cpufreq --install
+	
+	OR
+	sudo pacman -S power-profiles-daemon
+
 
 Check pacman cache:
 	du -sh /var/cache/pacman/pkg/

@@ -1,7 +1,7 @@
-Pacman:
-	dosbox
-	lutris
-	steam
-		
-AUR:
-	protonup-qt  # If useing steam/Gaming 
+dosbox
+steam
+wine
+wine-gecko
+wine-mono
+winetricks
+openttd
